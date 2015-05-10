@@ -42,7 +42,7 @@
 - (void)forceLoadingOfTheView
 {
     // This triggers to load the view
-    expect(self.formController.view).notTo.beNil();
+    XCTAssertNotNil(self.formController.view);
     self.formController.view.frame = CGRectMake(0, 0, 375, 667);
     [self.formController.view layoutIfNeeded];
 //    [self.formController.tableView reloadData];

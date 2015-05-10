@@ -8,9 +8,6 @@
 
 #import <XCTest/XCTest.h>
 
-#define EXP_SHORTHAND YES
-#import <Expecta/Expecta.h>
-
 #import <XLForm/XLForm.h>
 
 @interface XLTestCase : XCTestCase

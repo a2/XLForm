@@ -25,18 +25,18 @@ static NSString * const kTextFieldCellTag = @"TextFieldCellTag";
     UITableView * tableView = self.formController.tableView;
     
     // Check if the tableView match with the form descriptor
-    expect([tableView numberOfSections]).to.equal(1);
-    expect([tableView numberOfRowsInSection:0]).to.equal(1);
-    
+    XCTAssertEqual([tableView numberOfSections], 1);
+    XCTAssertEqual([tableView numberOfRowsInSection:0], 1);
+
     UITableViewCell * cell = [self.formController tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     // Check if the cell match with the XLFormRowDescriptorTypeText
-    expect(cell).to.beKindOf([XLFormTextFieldCell class]);
+    XCTAssertTrue([cell isKindOfClass:[XLFormTextFieldCell class]]);
     XLFormTextFieldCell * textFieldCell = (XLFormTextFieldCell *)cell;
     
     // Check if the title label match with the row descriptor title
-    expect(textFieldCell.textLabel.text).to.equal(@"Title");
+    XCTAssertEqualObjects(textFieldCell.textLabel.text, @"Title");
     // Check if the text field match with the row descriptor value
-    expect(textFieldCell.textField.text).to.equal(@"");
+    XCTAssertEqualObjects(textFieldCell.textField.text, @"");
 }
 
 - (void)testChangeFormDynamically
@@ -53,13 +53,13 @@ static NSString * const kTextFieldCellTag = @"TextFieldCellTag";
     [section addFormRow:row];
     
     // Check if the tableView match with the form descriptor
-    expect([tableView numberOfSections]).to.equal(2);
-    expect([tableView numberOfRowsInSection:0]).to.equal(1);
-    expect([tableView numberOfRowsInSection:1]).to.equal(1);
+    XCTAssertEqual([tableView numberOfSections], 2);
+    XCTAssertEqual([tableView numberOfRowsInSection:0], 1);
+    XCTAssertEqual([tableView numberOfRowsInSection:1], 1);
     
     // Check if the cell match with the XLFormRowDescriptorTypeBooleanSwitch
     UITableViewCell * cell = [self.formController tableView:tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-    expect(cell).to.beKindOf([XLFormSwitchCell class]);
+    XCTAssertTrue([cell isKindOfClass:[XLFormSwitchCell class]]);
 }
 
 //- (void)testFillTextFieldCell
@@ -80,7 +80,7 @@ static NSString * const kTextFieldCellTag = @"TextFieldCellTag";
 //    XLFormRowDescriptor * row = [self.formController.form formRowWithTag:kTextFieldCellTag];
 //    
 //    // Check if the text field match with the row descriptor value
-//    expect(row.value).to.equal(@"Name");
+//    XCTAssertEqualObjects(row.value, @"Name");
 //}
 
 #pragma mark - Build Form

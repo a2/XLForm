@@ -88,7 +88,6 @@
 		835A5A4C1AFF9D6000062D09 /* XLFormValidatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 835A59FF1AFF9D6000062D09 /* XLFormValidatorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		835A5A4E1AFF9D6000062D09 /* XLForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 835A5A011AFF9D6000062D09 /* XLForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		835A5A4F1AFF9D6000062D09 /* XLForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A5A021AFF9D6000062D09 /* XLForm.m */; };
-		835A5A521AFF9D8600062D09 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835A5A511AFF9D8600062D09 /* Expecta.framework */; };
 		835A5A551AFF9E6700062D09 /* forwardarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 835A5A541AFF9E6700062D09 /* forwardarrow@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -189,7 +188,6 @@
 		835A59FF1AFF9D6000062D09 /* XLFormValidatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormValidatorProtocol.h; sourceTree = "<group>"; };
 		835A5A011AFF9D6000062D09 /* XLForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLForm.h; sourceTree = "<group>"; };
 		835A5A021AFF9D6000062D09 /* XLForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLForm.m; sourceTree = "<group>"; };
-		835A5A511AFF9D8600062D09 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		835A5A541AFF9E6700062D09 /* forwardarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forwardarrow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,7 +204,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				835A58F01AFF9AF000062D09 /* XLForm.framework in Frameworks */,
-				835A5A521AFF9D8600062D09 /* Expecta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +215,6 @@
 			children = (
 				835A59AF1AFF9D6000062D09 /* XLForm */,
 				835A58F31AFF9AF000062D09 /* XLForm Tests */,
-				835A5A501AFF9D7700062D09 /* Frameworks */,
 				835A58E51AFF9AF000062D09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -406,14 +402,6 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
-		835A5A501AFF9D7700062D09 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				835A5A511AFF9D8600062D09 /* Expecta.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		835A5A531AFF9E6700062D09 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,7 +487,6 @@
 			buildPhases = (
 				835A58EB1AFF9AF000062D09 /* Sources */,
 				835A58EC1AFF9AF000062D09 /* Frameworks */,
-				835A5A561AFF9EA100062D09 /* Embed Carthage Frameworks */,
 				835A58ED1AFF9AF000062D09 /* Resources */,
 			);
 			buildRules = (
@@ -564,24 +551,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		835A5A561AFF9EA100062D09 /* Embed Carthage Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Expecta.framework",
-			);
-			name = "Embed Carthage Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		835A58DF1AFF9AF000062D09 /* Sources */ = {
@@ -773,7 +742,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -791,7 +759,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "XLForm Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

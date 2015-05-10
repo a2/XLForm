@@ -30,8 +30,7 @@
 - (void)testRequiredTextField
 {
     XLFormRowDescriptor * rowDescriptor = [self.formController.form formRowWithTag:XLFormRowDescriptorTypeText];
-    
-    expect([rowDescriptor doValidation].isValid).to.beFalsy();
+    XCTAssertFalse([rowDescriptor doValidation].isValid);
 }
 
 
