@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,15 +9,29 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28657A391990879200CE8180"
+               BlueprintIdentifier = "835A58E31AFF9AF000062D09"
+               BuildableName = "XLForm.framework"
+               BlueprintName = "XLForm"
+               ReferencedContainer = "container:XLForm.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "835A58EE1AFF9AF000062D09"
                BuildableName = "XLForm Tests.xctest"
                BlueprintName = "XLForm Tests"
-               ReferencedContainer = "container:XLForm Tests.xcodeproj">
+               ReferencedContainer = "container:XLForm.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,13 +46,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28657A391990879200CE8180"
+               BlueprintIdentifier = "835A58EE1AFF9AF000062D09"
                BuildableName = "XLForm Tests.xctest"
                BlueprintName = "XLForm Tests"
-               ReferencedContainer = "container:XLForm Tests.xcodeproj">
+               ReferencedContainer = "container:XLForm.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "835A58E31AFF9AF000062D09"
+            BuildableName = "XLForm.framework"
+            BlueprintName = "XLForm"
+            ReferencedContainer = "container:XLForm.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -52,10 +75,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28657A391990879200CE8180"
-            BuildableName = "XLForm Tests.xctest"
-            BlueprintName = "XLForm Tests"
-            ReferencedContainer = "container:XLForm Tests.xcodeproj">
+            BlueprintIdentifier = "835A58E31AFF9AF000062D09"
+            BuildableName = "XLForm.framework"
+            BlueprintName = "XLForm"
+            ReferencedContainer = "container:XLForm.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,6 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "835A58E31AFF9AF000062D09"
+            BuildableName = "XLForm.framework"
+            BlueprintName = "XLForm"
+            ReferencedContainer = "container:XLForm.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

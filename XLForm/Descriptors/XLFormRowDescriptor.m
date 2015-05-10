@@ -273,7 +273,7 @@
         @catch (NSException *exception) {
             // predicate syntax error.
             self.isDirtyDisablePredicateCache = YES;
-        };
+        }
     }
     else{
         self.disablePredicateCache = _disabled;
@@ -333,7 +333,7 @@
         @catch (NSException *exception) {
             // predicate syntax error.
             self.isDirtyHidePredicateCache = YES;
-        };
+        }
     }
     else{
         self.hidePredicateCache = _hidden;

@@ -127,10 +127,8 @@
     if (!self.tableView.dataSource){
         self.tableView.dataSource = self;
     }
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 44.0;
-    }
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
     if (self.form.title){
         self.title = self.form.title;
     }
@@ -673,10 +671,7 @@
     if ([cellClass respondsToSelector:@selector(formDescriptorCellHeightForRowDescriptor:)]){
         return [cellClass formDescriptorCellHeightForRowDescriptor:rowDescriptor];
     }
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){
-        return self.tableView.estimatedRowHeight;
-    }
-    return 44;
+    return self.tableView.estimatedRowHeight;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -52,7 +52,7 @@
         }
     }
     return nil;
-};
+}
 
 +(XLFormRegexValidator *)formRegexValidatorWithMsg:(NSString *)msg regex:(NSString *)regex {
     return [[XLFormRegexValidator alloc] initWithMsg:msg andRegexString:regex];

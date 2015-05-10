@@ -173,7 +173,7 @@
         if (self.allRows.count > index){
             [self removeObjectFromAllRowsAtIndex:index];
         }
-    };
+    }
 }
 
 - (void)moveRowAtIndexPath:(NSIndexPath *)sourceIndex toIndexPath:(NSIndexPath *)destinationIndex
@@ -358,7 +358,7 @@
         @catch (NSException *exception) {
             // predicate syntax error.
             self.isDirtyHidePredicateCache = YES;
-        };
+        }
     }
     else{
         self.hidePredicateCache = _hidden;

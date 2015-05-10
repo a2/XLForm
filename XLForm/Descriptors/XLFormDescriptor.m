@@ -179,7 +179,7 @@ NSString * const XLValidationStatusErrorKey = @"XLValidationStatusErrorKey";
     }
     else if ((index = [self.allSections indexOfObject:formSection]) != NSNotFound){
         [self removeObjectFromAllSectionsAtIndex:index];
-    };
+    }
 }
 
 -(void)removeFormRow:(XLFormRowDescriptor *)formRow

@@ -26,7 +26,7 @@
 
 #import "XLForm.h"
 
-NSString * const XLFormRowDescriptorTypeText = @"text";
+NSString *const XLFormRowDescriptorTypeText = @"text";
 NSString *const XLFormRowDescriptorTypeName = @"name";
 NSString *const XLFormRowDescriptorTypeURL = @"url";
 NSString *const XLFormRowDescriptorTypeEmail = @"email";
@@ -64,4 +64,3 @@ NSString *const XLFormRowDescriptorTypeBooleanSwitch = @"booleanSwitch";
 NSString *const XLFormRowDescriptorTypeButton = @"button";
 NSString *const XLFormRowDescriptorTypeInfo = @"info";
 NSString *const XLFormRowDescriptorTypeStepCounter = @"stepCounter";
-

@@ -23,49 +23,53 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-//Descriptors
-#import "XLFormDescriptor.h"
-#import "XLFormSectionDescriptor.h"
-#import "XLFormRowDescriptor.h"
+// Descriptors
+#import <XLForm/XLFormDescriptor.h>
+#import <XLForm/XLFormSectionDescriptor.h>
+#import <XLForm/XLFormRowDescriptor.h>
 
 // Categories
-#import "NSObject+XLFormAdditions.h"
+#import <XLForm/NSObject+XLFormAdditions.h>
+#import <XLForm/NSString+XLFormAdditions.h>
+#import <XLForm/NSArray+XLFormAdditions.h>
+#import <XLForm/NSExpression+XLFormAdditions.h>
+#import <XLForm/UIView+XLFormAdditions.h>
+#import <XLForm/NSPredicate+XLFormAdditions.h>
 
-//helpers
-#import "XLFormOptionsObject.h"
+// Helpers
+#import <XLForm/XLFormOptionsObject.h>
 
-//Controllers
-#import "XLFormOptionsViewController.h"
-#import "XLFormViewController.h"
+// Controllers
+#import <XLForm/XLFormOptionsViewController.h>
+#import <XLForm/XLFormViewController.h>
 
-//Protocols
-#import "XLFormDescriptorCell.h"
-#import "XLFormInlineRowDescriptorCell.h"
-#import "XLFormRowDescriptorViewController.h"
+// Protocols
+#import <XLForm/XLFormDescriptorCell.h>
+#import <XLForm/XLFormInlineRowDescriptorCell.h>
+#import <XLForm/XLFormRowDescriptorViewController.h>
 
-//Cells
-#import "XLFormBaseCell.h"
-#import "XLFormInlineSelectorCell.h"
-#import "XLFormTextFieldCell.h"
-#import "XLFormTextViewCell.h"
-#import "XLFormSelectorCell.h"
-#import "XLFormDatePickerCell.h"
-#import "XLFormButtonCell.h"
-#import "XLFormSwitchCell.h"
-#import "XLFormCheckCell.h"
-#import "XLFormDatePickerCell.h"
-#import "XLFormPickerCell.h"
-#import "XLFormLeftRightSelectorCell.h"
-#import "XLFormDateCell.h"
-#import "XLFormStepCounterCell.h"
-#import "XLFormSegmentedCell.h"
-#import "XLFormSliderCell.h"
+// Cells
+#import <XLForm/XLFormBaseCell.h>
+#import <XLForm/XLFormInlineSelectorCell.h>
+#import <XLForm/XLFormTextFieldCell.h>
+#import <XLForm/XLFormTextViewCell.h>
+#import <XLForm/XLFormSelectorCell.h>
+#import <XLForm/XLFormDatePickerCell.h>
+#import <XLForm/XLFormButtonCell.h>
+#import <XLForm/XLFormSwitchCell.h>
+#import <XLForm/XLFormCheckCell.h>
+#import <XLForm/XLFormDatePickerCell.h>
+#import <XLForm/XLFormPickerCell.h>
+#import <XLForm/XLFormLeftRightSelectorCell.h>
+#import <XLForm/XLFormDateCell.h>
+#import <XLForm/XLFormStepCounterCell.h>
+#import <XLForm/XLFormSegmentedCell.h>
+#import <XLForm/XLFormSliderCell.h>
 
 //Validation
-#import "XLFormRegexValidator.h"
-
+#import <XLForm/XLFormRegexValidator.h>
 
 extern NSString *const XLFormRowDescriptorTypeText;
 extern NSString *const XLFormRowDescriptorTypeName;
@@ -105,12 +109,3 @@ extern NSString *const XLFormRowDescriptorTypeBooleanSwitch;
 extern NSString *const XLFormRowDescriptorTypeButton;
 extern NSString *const XLFormRowDescriptorTypeInfo;
 extern NSString *const XLFormRowDescriptorTypeStepCounter;
-
-
-#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending
-
-
