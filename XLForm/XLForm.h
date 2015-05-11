@@ -67,8 +67,10 @@
 #import <XLForm/XLFormStepCounterCell.h>
 #import <XLForm/XLFormSegmentedCell.h>
 #import <XLForm/XLFormSliderCell.h>
+#import <XLForm/XLFormRightDetailCell.h>
+#import <XLForm/XLFormRightImageButton.h>
 
-//Validation
+// Validation
 #import <XLForm/XLFormRegexValidator.h>
 
 extern NSString *const XLFormRowDescriptorTypeText;
